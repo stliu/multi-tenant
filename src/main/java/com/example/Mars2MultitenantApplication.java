@@ -7,11 +7,13 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerA
 import org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication(
-		exclude = { DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class}
-		scanBasePackages = { "com.example" }
+//		exclude = {HibernateJpaAutoConfiguration.class},
+//		scanBasePackages = { "com.example" }
 )
+@EnableScheduling
 public class Mars2MultitenantApplication {
 
 	public static void main(String[] args) {
